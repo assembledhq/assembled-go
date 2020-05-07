@@ -1,4 +1,4 @@
-module github.com/riza-io/assembled-go
+module github.com/assembledhq/assembled-go
 
 go 1.14
 
