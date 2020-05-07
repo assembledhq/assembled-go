@@ -1,4 +1,3 @@
-
 name: assembled-go
 on: [push]
 jobs:
