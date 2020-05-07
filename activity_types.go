@@ -49,17 +49,6 @@ type DeleteActivityTypeRequest struct {
 	ID string `json:"id,omitempty"`
 }
 
-// Returns DeleteActivityTypeRequest with ID set to the empty string so that it's
-// not included in the JSON request body.
-func (r *DeleteActivityTypeRequest) body() interface{} {
-	if r == nil {
-		return r
-	}
-	req := *r
-	req.ID = ""
-	return &req
-}
-
 type ListActivityTypesResponse struct {
 	ActivityTypes map[string]ActivityType `json:"activity_types,omitempty"`
 }
