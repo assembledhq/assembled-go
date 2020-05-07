@@ -107,17 +107,6 @@ type GetAgentStatusRequest struct {
 	ID string `json:"id,omitempty"`
 }
 
-// Returns GetAgentStatusRequest with ID set to the empty string so that it's
-// not included in the JSON request body.
-func (r *GetAgentStatusRequest) body() interface{} {
-	if r == nil {
-		return r
-	}
-	req := *r
-	req.ID = ""
-	return &req
-}
-
 func (c *Client) CreateAgentStatus(ctx context.Context, r *CreateAgentStatusRequest) (*AgentStatus, error) {
 	var resp AgentStatus
 	if err := c.request(ctx, "POST", "/v0/agents/status", nil, r, &resp); err != nil {
