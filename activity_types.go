@@ -16,6 +16,10 @@ type ActivityType struct {
 	// activity is productive.
 	Channels []string `json:"channels,omitempty"`
 
+	// Third-party identifier. Supplied to Assembled and is used to uniquely
+	// identify activity types across different systems.
+	ImportID string `json:"import_id,omitempty"`
+
 	// Corresponds to type in the Activity object, will be deprecated in a
 	// future API version.
 	Value string `json:"value,omitempty"`
@@ -32,6 +36,10 @@ type CreateActivityTypeRequest struct {
 	// Channels associated with the activity. Must be non-empty when the the
 	// activity is productive.
 	Channels []string `json:"channels,omitempty"`
+
+	// Third-party identifier. Supplied to Assembled and is used to uniquely
+	// identify activity types across different systems.
+	ImportID string `json:"import_id,omitempty"`
 
 	// Corresponds to type in the Activity object, will be deprecated in a
 	// future API version.

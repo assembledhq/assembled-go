@@ -2,7 +2,7 @@ name: assembled-go
 on: [push]
 jobs:
   build:
-    name: test suite
+    name: Test suite
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
